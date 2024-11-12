@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 **start_time** | **datetime** |  | 
 **end_time** | **datetime** |  | [optional] 
 **state** | [**RunSessionState**](RunSessionState.md) |  | [optional] 
+**inputs** | **object** |  | [optional] 
+**data** | **object** |  | [optional] 
 
 ## Example
 

@@ -5,7 +5,7 @@ All URIs are relative to *https://api.autotab.com/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**cancel**](RunApi.md#cancel) | **POST** /run/{id}/cancel | Cancel
-[**list**](RunApi.md#list) | **GET** /run/list | List Runs
+[**list**](RunApi.md#list) | **GET** /run/list | List
 [**retrieve**](RunApi.md#retrieve) | **GET** /run/{id} | Retrieve
 [**start**](RunApi.md#start) | **POST** /run/ | Start
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 # **list**
 > List[RunSession] list(skill_id=skill_id, state_filter=state_filter)
 
-List Runs
+List
 
 ### Example
 
@@ -109,7 +109,7 @@ async with autotab.Client(configuration) as api_client:
     state_filter = [autotab.RunSessionState()] # List[RunSessionState] | The state filter to list run sessions for (optional)
 
     try:
-        # List Runs
+        # List
         api_response = await api_instance.list(skill_id=skill_id, state_filter=state_filter)
         print("The response of RunApi->list:\n")
         pprint(api_response)
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **retrieve**
-> RunSessionWithData retrieve(id)
+> RunSession retrieve(id)
 
 Retrieve
 
@@ -161,7 +161,7 @@ Retrieve
 
 ```python
 import autotab
-from autotab.models.run_session_with_data import RunSessionWithData
+from autotab.models.run_session import RunSession
 from autotab.rest import ApiException
 from pprint import pprint
 
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RunSessionWithData**](RunSessionWithData.md)
+[**RunSession**](RunSession.md)
 
 ### Authorization
 

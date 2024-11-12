@@ -16,7 +16,6 @@ autotab/models/http_validation_error.py
 autotab/models/input.py
 autotab/models/run_session.py
 autotab/models/run_session_state.py
-autotab/models/run_session_with_data.py
 autotab/models/run_skill_request.py
 autotab/models/skill.py
 autotab/models/validation_error.py
@@ -30,7 +29,6 @@ docs/Input.md
 docs/RunApi.md
 docs/RunSession.md
 docs/RunSessionState.md
-docs/RunSessionWithData.md
 docs/RunSkillRequest.md
 docs/Skill.md
 docs/SkillApi.md
@@ -44,4 +42,16 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
+test/test_environment.py
+test/test_http_validation_error.py
+test/test_input.py
+test/test_run_api.py
+test/test_run_session.py
+test/test_run_session_state.py
+test/test_run_skill_request.py
+test/test_skill.py
+test/test_skill_api.py
+test/test_validation_error.py
+test/test_validation_error_loc_inner.py
+test/test_variable_data_type.py
 tox.ini

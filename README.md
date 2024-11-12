@@ -59,11 +59,11 @@ All URIs are relative to *https://api.autotab.com/v1*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *RunApi* | [**cancel**](docs/RunApi.md#cancel) | **POST** /run/{id}/cancel | Cancel
-*RunApi* | [**list**](docs/RunApi.md#list) | **GET** /run/list | List Runs
+*RunApi* | [**list**](docs/RunApi.md#list) | **GET** /run/list | List
 *RunApi* | [**retrieve**](docs/RunApi.md#retrieve) | **GET** /run/{id} | Retrieve
 *RunApi* | [**start**](docs/RunApi.md#start) | **POST** /run/ | Start
-*SkillApi* | [**list**](docs/SkillApi.md#list) | **GET** /skill/list | List Skills
-*SkillApi* | [**retrieve**](docs/SkillApi.md#retrieve) | **GET** /skill/{id} | Get Skill
+*SkillApi* | [**list**](docs/SkillApi.md#list) | **GET** /skill/list | List
+*SkillApi* | [**retrieve**](docs/SkillApi.md#retrieve) | **GET** /skill/{id} | Retrieve
 
 
 ## Documentation For Models
@@ -73,7 +73,6 @@ Class | Method | HTTP request | Description
  - [Input](docs/Input.md)
  - [RunSession](docs/RunSession.md)
  - [RunSessionState](docs/RunSessionState.md)
- - [RunSessionWithData](docs/RunSessionWithData.md)
  - [RunSkillRequest](docs/RunSkillRequest.md)
  - [Skill](docs/Skill.md)
  - [ValidationError](docs/ValidationError.md)

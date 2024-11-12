@@ -4,14 +4,14 @@ All URIs are relative to *https://api.autotab.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**list**](SkillApi.md#list) | **GET** /skill/list | List Skills
-[**retrieve**](SkillApi.md#retrieve) | **GET** /skill/{id} | Get Skill
+[**list**](SkillApi.md#list) | **GET** /skill/list | List
+[**retrieve**](SkillApi.md#retrieve) | **GET** /skill/{id} | Retrieve
 
 
 # **list**
 > List[Skill] list()
 
-List Skills
+List
 
 ### Example
 
@@ -36,7 +36,7 @@ async with autotab.Client(configuration) as api_client:
     api_instance = autotab.SkillApi(api_client)
 
     try:
-        # List Skills
+        # List
         api_response = await api_instance.list()
         print("The response of SkillApi->list:\n")
         pprint(api_response)
@@ -75,7 +75,7 @@ This endpoint does not need any parameter.
 # **retrieve**
 > Skill retrieve(id)
 
-Get Skill
+Retrieve
 
 ### Example
 
@@ -101,7 +101,7 @@ async with autotab.Client(configuration) as api_client:
     id = 'id_example' # str | 
 
     try:
-        # Get Skill
+        # Retrieve
         api_response = await api_instance.retrieve(id)
         print("The response of SkillApi->retrieve:\n")
         pprint(api_response)
