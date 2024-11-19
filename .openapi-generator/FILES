@@ -42,16 +42,4 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_environment.py
-test/test_http_validation_error.py
-test/test_input.py
-test/test_run_api.py
-test/test_run_session.py
-test/test_run_session_state.py
-test/test_run_skill_request.py
-test/test_skill.py
-test/test_skill_api.py
-test/test_validation_error.py
-test/test_validation_error_loc_inner.py
-test/test_variable_data_type.py
 tox.ini

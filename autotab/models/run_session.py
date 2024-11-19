@@ -35,11 +35,12 @@ class RunSession(BaseModel):
     created_at: datetime
     environment: Optional[Environment]
     start_time: datetime
+    name: Optional[StrictStr] = None
     end_time: Optional[datetime] = None
     state: Optional[RunSessionState] = None
     inputs: Optional[Dict[str, Any]] = None
     data: Optional[Dict[str, Any]] = None
-    __properties: ClassVar[List[str]] = ["id", "skill_id", "owner", "created_at", "environment", "start_time", "end_time", "state", "inputs", "data"]
+    __properties: ClassVar[List[str]] = ["id", "skill_id", "owner", "created_at", "environment", "start_time", "name", "end_time", "state", "inputs", "data"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -85,6 +86,11 @@ class RunSession(BaseModel):
         if self.environment is None and "environment" in self.model_fields_set:
             _dict['environment'] = None
 
+        # set to None if name (nullable) is None
+        # and model_fields_set contains the field
+        if self.name is None and "name" in self.model_fields_set:
+            _dict['name'] = None
+
         # set to None if end_time (nullable) is None
         # and model_fields_set contains the field
         if self.end_time is None and "end_time" in self.model_fields_set:
@@ -123,6 +129,7 @@ class RunSession(BaseModel):
             "created_at": obj.get("created_at"),
             "environment": obj.get("environment"),
             "start_time": obj.get("start_time"),
+            "name": obj.get("name"),
             "end_time": obj.get("end_time"),
             "state": obj.get("state"),
             "inputs": obj.get("inputs"),

@@ -14,7 +14,7 @@
 """  # noqa: E501
 
 
-__version__ = "0.0.2"
+__version__ = "0.0.4"
 
 # import apis into sdk package
 from autotab.api.run_api import RunApi

@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **created_at** | **datetime** |  | 
 **environment** | [**Environment**](Environment.md) |  | 
 **start_time** | **datetime** |  | 
+**name** | **str** |  | [optional] 
 **end_time** | **datetime** |  | [optional] 
 **state** | [**RunSessionState**](RunSessionState.md) |  | [optional] 
 **inputs** | **object** |  | [optional] 
