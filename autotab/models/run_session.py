@@ -40,7 +40,8 @@ class RunSession(BaseModel):
     state: Optional[RunSessionState] = None
     inputs: Optional[Dict[str, Any]] = None
     data: Optional[Dict[str, Any]] = None
-    __properties: ClassVar[List[str]] = ["id", "skill_id", "owner", "created_at", "environment", "start_time", "name", "end_time", "state", "inputs", "data"]
+    video_url: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["id", "skill_id", "owner", "created_at", "environment", "start_time", "name", "end_time", "state", "inputs", "data", "video_url"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -111,6 +112,11 @@ class RunSession(BaseModel):
         if self.data is None and "data" in self.model_fields_set:
             _dict['data'] = None
 
+        # set to None if video_url (nullable) is None
+        # and model_fields_set contains the field
+        if self.video_url is None and "video_url" in self.model_fields_set:
+            _dict['video_url'] = None
+
         return _dict
 
     @classmethod
@@ -133,7 +139,8 @@ class RunSession(BaseModel):
             "end_time": obj.get("end_time"),
             "state": obj.get("state"),
             "inputs": obj.get("inputs"),
-            "data": obj.get("data")
+            "data": obj.get("data"),
+            "video_url": obj.get("video_url")
         })
         return _obj
 

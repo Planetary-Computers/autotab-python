@@ -33,6 +33,7 @@ class VariableDataType(str, Enum):
     OBJECT = 'object'
     FILE = 'file'
     TAB = 'tab'
+    REF = 'ref'
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:

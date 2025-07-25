@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **state** | [**RunSessionState**](RunSessionState.md) |  | [optional] 
 **inputs** | **object** |  | [optional] 
 **data** | **object** |  | [optional] 
+**video_url** | **str** |  | [optional] 
 
 ## Example
 

@@ -4,12 +4,12 @@ All URIs are relative to *https://api.autotab.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**list**](SkillApi.md#list) | **GET** /skill/list | List
-[**retrieve**](SkillApi.md#retrieve) | **GET** /skill/{id} | Retrieve
+[**list_skills**](SkillApi.md#list_skills) | **GET** /skill/list | List
+[**retrieve_skill**](SkillApi.md#retrieve_skill) | **GET** /skill/{id} | Retrieve
 
 
-# **list**
-> List[Skill] list()
+# **list_skills**
+> List[Skill] list_skills()
 
 List
 
@@ -37,11 +37,11 @@ async with autotab.Client(configuration) as api_client:
 
     try:
         # List
-        api_response = await api_instance.list()
-        print("The response of SkillApi->list:\n")
+        api_response = await api_instance.list_skills()
+        print("The response of SkillApi->list_skills:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling SkillApi->list: %s\n" % e)
+        print("Exception when calling SkillApi->list_skills: %s\n" % e)
 ```
 
 
@@ -72,8 +72,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **retrieve**
-> Skill retrieve(id)
+# **retrieve_skill**
+> Skill retrieve_skill(id)
 
 Retrieve
 
@@ -102,11 +102,11 @@ async with autotab.Client(configuration) as api_client:
 
     try:
         # Retrieve
-        api_response = await api_instance.retrieve(id)
-        print("The response of SkillApi->retrieve:\n")
+        api_response = await api_instance.retrieve_skill(id)
+        print("The response of SkillApi->retrieve_skill:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling SkillApi->retrieve: %s\n" % e)
+        print("Exception when calling SkillApi->retrieve_skill: %s\n" % e)
 ```
 
 

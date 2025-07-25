@@ -87,13 +87,13 @@ class Client:
         self.rest_client = rest.RESTClientObject(configuration)
         self.default_headers = {
             "Autotab-Lang": "python",
-            "Autotab-Package-Version": "0.0.4"
+            "Autotab-Package-Version": "0.0.5"
         }
         if header_name is not None:
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'Autotab/Python 0.0.4'
+        self.user_agent = 'Autotab/Python 0.0.5'
         self.client_side_validation = configuration.client_side_validation
 
     async def __aenter__(self):

@@ -59,11 +59,12 @@ All URIs are relative to *https://api.autotab.com/v1*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *RunApi* | [**cancel**](docs/RunApi.md#cancel) | **POST** /run/{id}/cancel | Cancel
-*RunApi* | [**list**](docs/RunApi.md#list) | **GET** /run/list | List
-*RunApi* | [**retrieve**](docs/RunApi.md#retrieve) | **GET** /run/{id} | Retrieve
+*RunApi* | [**list_runs**](docs/RunApi.md#list_runs) | **GET** /run/list | List
+*RunApi* | [**retrieve_run**](docs/RunApi.md#retrieve_run) | **GET** /run/{id} | Retrieve
 *RunApi* | [**start**](docs/RunApi.md#start) | **POST** /run/ | Start
-*SkillApi* | [**list**](docs/SkillApi.md#list) | **GET** /skill/list | List
-*SkillApi* | [**retrieve**](docs/SkillApi.md#retrieve) | **GET** /skill/{id} | Retrieve
+*RunApi* | [**video_url**](docs/RunApi.md#video_url) | **GET** /run/{id}/video_url | Video Url
+*SkillApi* | [**list_skills**](docs/SkillApi.md#list_skills) | **GET** /skill/list | List
+*SkillApi* | [**retrieve_skill**](docs/SkillApi.md#retrieve_skill) | **GET** /skill/{id} | Retrieve
 
 
 ## Documentation For Models

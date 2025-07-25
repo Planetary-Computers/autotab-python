@@ -39,7 +39,7 @@ class SkillApi:
 
 
     @validate_call
-    async def list(
+    async def list_skills(
         self,
         _request_timeout: Union[
             None,
@@ -79,7 +79,7 @@ class SkillApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_serialize(
+        _param = self._list_skills_serialize(
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -102,7 +102,7 @@ class SkillApi:
 
 
     @validate_call
-    async def list_with_http_info(
+    async def list_skills_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -142,7 +142,7 @@ class SkillApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_serialize(
+        _param = self._list_skills_serialize(
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -165,7 +165,7 @@ class SkillApi:
 
 
     @validate_call
-    async def list_without_preload_content(
+    async def list_skills_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -205,7 +205,7 @@ class SkillApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._list_serialize(
+        _param = self._list_skills_serialize(
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -223,7 +223,7 @@ class SkillApi:
         return response_data.response
 
 
-    def _list_serialize(
+    def _list_skills_serialize(
         self,
         _request_auth,
         _content_type,
@@ -285,7 +285,7 @@ class SkillApi:
 
 
     @validate_call
-    async def retrieve(
+    async def retrieve_skill(
         self,
         id: StrictStr,
         _request_timeout: Union[
@@ -328,7 +328,7 @@ class SkillApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._retrieve_serialize(
+        _param = self._retrieve_skill_serialize(
             id=id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -353,7 +353,7 @@ class SkillApi:
 
 
     @validate_call
-    async def retrieve_with_http_info(
+    async def retrieve_skill_with_http_info(
         self,
         id: StrictStr,
         _request_timeout: Union[
@@ -396,7 +396,7 @@ class SkillApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._retrieve_serialize(
+        _param = self._retrieve_skill_serialize(
             id=id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -421,7 +421,7 @@ class SkillApi:
 
 
     @validate_call
-    async def retrieve_without_preload_content(
+    async def retrieve_skill_without_preload_content(
         self,
         id: StrictStr,
         _request_timeout: Union[
@@ -464,7 +464,7 @@ class SkillApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._retrieve_serialize(
+        _param = self._retrieve_skill_serialize(
             id=id,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -484,7 +484,7 @@ class SkillApi:
         return response_data.response
 
 
-    def _retrieve_serialize(
+    def _retrieve_skill_serialize(
         self,
         id,
         _request_auth,

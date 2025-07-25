@@ -5,9 +5,10 @@ All URIs are relative to *https://api.autotab.com/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**cancel**](RunApi.md#cancel) | **POST** /run/{id}/cancel | Cancel
-[**list**](RunApi.md#list) | **GET** /run/list | List
-[**retrieve**](RunApi.md#retrieve) | **GET** /run/{id} | Retrieve
+[**list_runs**](RunApi.md#list_runs) | **GET** /run/list | List
+[**retrieve_run**](RunApi.md#retrieve_run) | **GET** /run/{id} | Retrieve
 [**start**](RunApi.md#start) | **POST** /run/ | Start
+[**video_url**](RunApi.md#video_url) | **GET** /run/{id}/video_url | Video Url
 
 
 # **cancel**
@@ -78,8 +79,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list**
-> List[RunSession] list(skill_id=skill_id, state_filter=state_filter)
+# **list_runs**
+> List[RunSession] list_runs(skill_id=skill_id, state_filter=state_filter)
 
 List
 
@@ -110,11 +111,11 @@ async with autotab.Client(configuration) as api_client:
 
     try:
         # List
-        api_response = await api_instance.list(skill_id=skill_id, state_filter=state_filter)
-        print("The response of RunApi->list:\n")
+        api_response = await api_instance.list_runs(skill_id=skill_id, state_filter=state_filter)
+        print("The response of RunApi->list_runs:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling RunApi->list: %s\n" % e)
+        print("Exception when calling RunApi->list_runs: %s\n" % e)
 ```
 
 
@@ -150,8 +151,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **retrieve**
-> RunSession retrieve(id)
+# **retrieve_run**
+> RunSession retrieve_run(id)
 
 Retrieve
 
@@ -180,11 +181,11 @@ async with autotab.Client(configuration) as api_client:
 
     try:
         # Retrieve
-        api_response = await api_instance.retrieve(id)
-        print("The response of RunApi->retrieve:\n")
+        api_response = await api_instance.retrieve_run(id)
+        print("The response of RunApi->retrieve_run:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling RunApi->retrieve: %s\n" % e)
+        print("Exception when calling RunApi->retrieve_run: %s\n" % e)
 ```
 
 
@@ -277,6 +278,74 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful Response |  -  |
+**404** | Not found |  -  |
+**422** | Validation Error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **video_url**
+> str video_url(id)
+
+Video Url
+
+### Example
+
+* Bearer Authentication (HTTPBearer):
+
+```python
+import autotab
+from autotab.rest import ApiException
+from pprint import pprint
+
+
+
+# Configure Bearer authorization: HTTPBearer
+configuration = autotab.Configuration(
+    api_key = os.environ["AUTOTAB_API_KEY"]
+)
+
+# Enter a context with an instance of the API client
+async with autotab.Client(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = autotab.RunApi(api_client)
+    id = 'id_example' # str | 
+
+    try:
+        # Video Url
+        api_response = await api_instance.video_url(id)
+        print("The response of RunApi->video_url:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling RunApi->video_url: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**|  | 
+
+### Return type
+
+**str**
+
+### Authorization
+
+[HTTPBearer](../README.md#HTTPBearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 ### HTTP response details
